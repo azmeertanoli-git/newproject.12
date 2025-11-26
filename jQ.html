@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+
+          *{
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+          }
+
+    #mybox{
+          display: flex;
+          margin: 0 auto;
+          width: 40%;
+          height: 150px;
+          background-color: blueviolet;
+          border-radius: 20px;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          margin-top: 50px;
+    }
+
+    #btns{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          margin-top: 50px;
+          
+    }
+
+    #hidebtn{
+          width: 50px;
+          height: 30px;
+          background-color: red;
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #showbtn{
+          width: 50px;
+          height: 30px;
+          background-color: rgb(4, 0, 255);
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #togglebtn{
+          width: 50px;
+          height: 30px;
+          background-color: rgb(0, 170, 255);
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #fadeinbtn{
+          width: 50px;
+          height: 30px;
+          background-color: rgb(35, 109, 3);
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #fadeoutbtn{
+          width: 50px;
+          height: 30px;
+          background-color: rgb(211, 101, 5);
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #fadetogglebtn{
+          width: 50px;
+          height: 30px;
+          background-color: rgb(118, 149, 6);
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #slideupbtn{
+          width: 70px;
+          height: 30px;
+          background-color: rgb(26, 35, 2);
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #slidedownbtn{
+          width: 80px;
+          height: 30px;
+          background-color: brown;
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    #slidetogglebtn{
+          width: 80px;
+          height: 30px;
+          background-color: rgb(45, 45, 45);
+          color: white;
+          border: none;
+          border-radius: 5px;
+    }
+
+    .example{
+          display: flex;
+          gap: 10px;
+          padding-left: 30px;
+          padding-top: 30px;
+
+    }
+
+    #btn1{
+         background-color: aqua;
+         border: 1px solid rgb(56, 55, 55);
+         width: 80px;
+         border-radius: 5px;
+    }
+
+    #btn2{
+         background-color: rgb(119, 253, 161);
+         border: 1px solid rgb(56, 55, 55);
+         width: 90px;
+         border-radius: 5px;
+    }
+
+    #btn3{
+         background-color: rgb(244, 245, 159);
+         border: 1px solid rgb(56, 55, 55);
+         width: 80px;
+         border-radius: 5px;
+    }
+
+     #btn4{
+         background-color: rgb(244, 245, 159);
+         border: 1px solid rgb(56, 55, 55);
+         width: 110px;
+         height: 30px;
+         margin-top: 100px;
+         border-radius: 5px;
+    }
+
+    .green { color: green; font-size: 24px;}
+
+
+
+</style>
+<body>
+
+      <div id="mybox">This is my website</div>
+
+      <div id="btns">
+          <button id="hidebtn">Hide</button>
+          <button id="showbtn">Show</button>
+          <button id="togglebtn">Toggle</button>
+
+          <button id="fadeinbtn">FadeIn</button>
+          <button id="fadeoutbtn">FadeOut</button>
+          <button id="fadetogglebtn">Toggle</button>
+
+          <button id="slideupbtn">Slide Up</button>
+          <button id="slidedownbtn">Slide Down</button>
+          <button id="slidetogglebtn">Slide Toggle</button>
+      </div>
+
+      <div class="example">
+          <p id="para">Hello World</p>
+          <button id="btn1">Change Text</button>
+      </div>
+
+      <div class="example">
+          <p id="para2">Bold Text</p>
+          <button id="btn2">Change Html</button>
+      </div>
+
+      <div class="example">
+          <input type="text" id="name" placeholder="Enter Name">
+          <button id="btn3">Get Value</button>
+      </div>
+      
+      <div class="example">
+            <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2J5JjCQOrIljwZW7W3t0LclZF7ZdcDpHKg&s" width="200px" height="200px">
+            <button id="btn4">Change Image</button>
+      </div>
+
+      <div class="example">
+            <p id="demo">Hello</p>
+            <button id="btn5">Add Class</button>
+      </div>
+
+      <div class="example">
+            <ul id="list" style="margin: 0; padding-left: 20px;"></ul>
+            <button id="btn6">Add Class</button>
+      </div>
+
+      <div class="example">
+            <div id="box" style="width: 100px; height: 100px; background: lightblue;"></div>
+      </div>
+
+      <script>
+          $(function(){
+
+           $("#hidebtn").click(()=> $("#mybox").hide());
+           $("#showbtn").click(()=> $("#mybox").show());
+           $("#togglebtn").click(()=> $("#mybox").toggle());
+
+           $("#fadeinbtn").click(()=> $("#mybox").fadeIn());
+           $("#fadeoutbtn").click(()=> $("#mybox").fadeOut());
+           $("#fadetogglebtn").click(()=> $("#mybox").fadeToggle());
+
+           $("#slideupbtn").click(()=> $("#mybox").slideUp());
+           $("#slidedownbtn").click(()=> $("#mybox").slideDown());
+           $("#slidetogglebtn").click(()=> $("#mybox").slideToggle());
+
+          });
+
+          $("#btn1").click(function(){
+            $("#para").text("Text has been change");
+          });
+
+          $("#btn2").click(function(){
+            $("#para2").html("<i> New HTML </i>");
+          });
+
+          $("#btn3").click(function(){
+            alert($("#name").val());
+          });
+
+          $("#btn4").click(function(){
+            $("#img1").attr("src","download.jpeg");
+          });
+
+          $("#btn5").click(function(){
+            $("#demo").addClass("green");
+          });
+
+          $("#btn6").click(function(){
+            $("#list").append("<i>New Item</i<");
+          });
+
+          
+
+
+      </script>
+          
+</body>
+</html>
